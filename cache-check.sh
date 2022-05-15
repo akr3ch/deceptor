@@ -13,7 +13,6 @@ red='\e[31m'
 green='\e[32m'
 yellow='\e[33m'
 blue='\e[34m'
-test='\e[36m'
 none='\e[0m'
 
 ### take url input from the user ###
@@ -25,7 +24,7 @@ extentions=(.js .css .jsp .asp .aspx .txt .html .htm .php5 .php4 .php3 .php .pht
 
 ### print possible exploitable url paths ###
 for i in ${extentions[@]};do
-	echo -e "${test}[`date '+%T'`] ${none}${blue}Navigate to ${yellow}${url}/CacheCheck1337${i}"
+	echo -e "${green}[`date '+%T'`] ${none}${blue}Navigate to ${yellow}${url}/CacheCheck1337${i}"
 done
 
 
