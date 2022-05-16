@@ -17,18 +17,23 @@ none='\e[0m'
 
 if [[ ${1} == '-h' || ${1} == '--help' ]];then
 	### print the help menu ###
-	echo -e "\n${blue}${0} --url ${yellow}https://test.example.com/myaccount"
+	echo -e "\n${bold}${blue}${0} --url ${yellow}https://test.example.com/myaccount${none}\n"
 	echo -e "${green}Usage of the script too easy.Enter an url where unauthenticated users don't have any access and the script automatically sends requests to that endpoint until it gets a valid hit from that endpoint. All you need is the knowladge about web cache deception. What is web cache deception?"
 	echo -e "${green}Web cache deception ${blue}(WCD) ${green}is an ${red}attack${none} ${green}where an ${red}attacker${none} ${green}tricks a caching proxy into erroneously storing private information transmitted over the Internet and subsequently gains unauthorized access to that cached data."
 	exit 0
 elif [[ ${1} == '-u' || ${1} == '--url' ]];then
 	### take url input after before running ###
 	url=${2}
-
+	if [[ -z $url ]];then
+        echo -e "${yellow}${bold}[${blue}-${yellow}] ${none}${red}Please enter an url." && exit 0
+        fi
 elif [[ -z ${1} ]];then
 	### take url input after running ###
-	echo -e "${green}${bold}[+] ${none}${blue}Enter URL address ↔ (example: https://example.com/myaccount)"
+	echo -e "${green}${bold}[${red}+${green}] ${none}${blue}Enter url address ↔ (example: https://example.com/myaccount)"
 	read -p "»» " url
+	if [[ -z $url ]];then
+	echo -e "${yellow}${bold}[${blue}-${yellow}] ${none}${red}Please enter a valid url." && exit 0
+	fi
 fi
 
 ### extentions name ###
