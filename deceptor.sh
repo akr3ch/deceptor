@@ -3,7 +3,7 @@
 ##### Web Cache Deception exploitation script ####
 ## coder: akrech				##
 ## github: https://github.com/akr3ch		##
-## website: akech.xyz   			##
+## website: akrech.xyz   			##
 ## twitter: a_k_r_e_c_H				##
 ##################################################
 
