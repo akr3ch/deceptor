@@ -1,4 +1,4 @@
-###### The script will not fail to detect web cache deception, but may also return some false positive result. If the website returns `200 OK` on single every request.
+###### This script will not fail to detect web cache deception, but may also return some false positive result. If the website returns `200 OK` on single every request.
 
 ##### Usage:
 ```
