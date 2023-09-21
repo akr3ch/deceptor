@@ -1,4 +1,4 @@
-#### This script will not fail to detect *Web Cache Deception* vulnerability, but may also return some *false positive* result. If the website returns `200 OK` on every single request for any endpoint.
+###### This script will not fail to detect *Web Cache Deception* vulnerability, but may also return some *false positive* result. If the website returns `200 OK` on every single request for any endpoint.
 
 ##### Usage:
 ```http
